@@ -215,7 +215,7 @@ public function getSchedules($schedule)
                     ];                                                                                   
                 $data_string = json_encode($data);
 
-        $request = $client->post('https://www.googleapis.com/qpxExpress/v1/trips/search?key=AIzaSyCWKmFRWW-1pZWa5WnEbDoVRmxpmes1cLg',['json'=>$data]);
+        $request = $client->post('https://www.googleapis.com/qpxExpress/v1/trips/search?key=<'<Enter API Key>',['json'=>$data]);
             
 
         //$request->setBody($data_string);
