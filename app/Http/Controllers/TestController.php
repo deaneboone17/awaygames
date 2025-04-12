@@ -234,7 +234,7 @@ dd($response);
 
     public function getYelp(){
 
-        $api_token='t0EWzW0isTavSKzvujplXPGrDT6FBZAPhKVgKRABKV2nLEazJxZYDmVg-eo94fcTwzZuiQyikR1Sw5u3rqLYwEKpziEa-zkz5ynD-9830k2I_5L_xB0zBvnmdsfOWHYx';
+        $api_token='ENTER API TOKEN';
 
         //$trip = Trip::where('tripActive',1)->find($user_id);
 
@@ -308,8 +308,8 @@ dd($response);
         $request = $client->post('https://api.yelp.com/oauth2/token',
 
             ['grant_type'=>'client_credentials'],
-            ['client_id'=>'86XwvCP_8WtFhT-c9ZfiyA'],
-            ['client_secret'=>'2qUf1oFzigqFx70rURgWovA467aoBDGz2TcRVcl7ohapJc9OZwDmP8Y5gGmaBkoI']
+            ['client_id'=>'ENTER CLIENT ID'],
+            ['client_secret'=>'Enter CLIENT SECRET']
             );
 
 
