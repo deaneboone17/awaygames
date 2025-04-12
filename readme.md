@@ -1,40 +1,158 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# 🏈 AwayGames – Travel Planner for NFL Fans
 
-## About Laravel
+AwayGames is a full-stack web application that allows users to plan travel for professional football road games. It consolidates flight, ticket, hotel, and local attraction information in a seamless experience powered by RESTful APIs and best practices in modern web development.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+This project was built using the Laravel PHP framework, Bootstrap for responsive UI, and deployed on Amazon Web Services (AWS). It demonstrates deep proficiency in MVC architecture, user authentication, database design, third-party API integration, and scalable cloud deployment.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+## 🔍 Features
 
-## Learning Laravel
+- 🔐 User registration, login, and password reset
+- 🧑‍💼 Role-based access control (User, Admin, SuperAdmin)
+- 📅 View NFL away game schedules
+- ✈️ Search for flights (Google QPX Express API)
+- 🎟️ View ticket availability (SeatGeek API)
+- 🏨 Discover hotels and points of interest (Yelp Fusion API)
+- 💾 Save, edit, and delete trips
+- 📧 Share trips with others via email
+- 🧪 Form validation, unit testing, and user acceptance testing
+- ☁️ Cloud-hosted with scalable AWS architecture
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+---
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+## 🏗️ Tech Stack
 
-## Contributing
+| Layer            | Technology Used                              |
+|------------------|-----------------------------------------------|
+| Language         | PHP                                           |
+| Framework        | Laravel (MVC Architecture)                   |
+| Frontend         | Bootstrap, HTML5, Sass, JavaScript           |
+| Backend          | MySQL (RDS on AWS), Laravel Eloquent ORM     |
+| APIs Integrated  | Google QPX Express, SeatGeek, Yelp Fusion    |
+| Deployment       | AWS EC2, RDS, S3, Elastic IP                 |
+| Dev Environment  | Laravel Homestead, Vagrant, VirtualBox       |
+| Version Control  | Git                                           |
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+---
 
-## Security Vulnerabilities
+## 📁 Project Structure
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+```
+awaygames/
+├── app/                # Controllers, Models, Middleware
+├── resources/views/    # Blade templates
+├── routes/web.php      # Route definitions
+├── public/             # Frontend assets
+├── database/           # Migrations & Seeders
+├── .env                # Environment config
+└── composer.json       # Dependencies
+```
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+## 🚀 Getting Started
+
+### Prerequisites
+
+- PHP 7.x
+- Composer
+- MySQL
+- Laravel CLI
+- AWS (or local LAMP stack)
+- Google QPX API Key (deprecated, optional)
+- SeatGeek & Yelp Fusion API credentials
+
+### Installation
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/yourusername/awaygames.git
+   cd awaygames
+   ```
+
+2. Install dependencies:
+   ```bash
+   composer install
+   npm install && npm run dev
+   ```
+
+3. Set up `.env` file:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+
+4. Configure your database in `.env`, then run:
+   ```bash
+   php artisan migrate --seed
+   ```
+
+5. Launch the server:
+   ```bash
+   php artisan serve
+   ```
+
+---
+
+## 🌍 Deployment
+
+Deployed on AWS using:
+- EC2 (Ubuntu, Apache, PHP)
+- RDS (MySQL)
+- S3 (for assets & email templates)
+- Elastic IP (DNS mapped to [away.games](http://away.games))
+
+---
+
+## 🔒 Security Features
+
+- Laravel’s built-in authentication
+- Role-based access via custom middleware
+- CSRF protection
+- XSS prevention with Blade’s output escaping
+- Secure credentials via `.env` and AWS IAM policies
+
+---
+
+## 🧪 Testing Strategy
+
+- ✅ Manual unit testing with Postman for API verification
+- ✅ REST route testing via Laravel debug mode
+- ✅ UAT with real users
+- ✅ Mailtrap integration for email functionality validation
+
+---
+
+## 🔮 Future Enhancements
+
+- Enable in-app bookings (tickets, hotels, flights)
+- Integrate schedule updates via sports data API
+- Expand to other sports leagues
+- Add progressive web app (PWA) support
+- Containerize with Docker for portability
+
+---
+
+## 📚 Lessons Learned
+
+- Frameworks accelerate MVP development
+- Cloud platforms simplify scalability and security
+- Clean API integration requires robust error handling
+- Early MVP + feedback cycle beats perfection paralysis
+
+---
+
+## 👨🏽‍💻 Author
+
+**Deane Boone**  
+Full-stack Developer | Cloud Enthusiast | API Integrator  
+📧 dboone1@students.towson.edu  
+🌐 [LinkedIn or Portfolio Link Here]
+
+---
+
+## 📜 License
+
+This project is for demonstration and educational use. Contact the author for usage inquiries.
