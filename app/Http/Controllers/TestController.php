@@ -170,7 +170,7 @@ public function getSchedules($schedule)
                             ),                   
              );                                                                                   
                 $data_string = json_encode($data);
-                $ch = curl_init('https://www.googleapis.com/qpxExpress/v1/trips/search?key=AIzaSyCWKmFRWW-1pZWa5WnEbDoVRmxpmes1cLg');                                                                      
+                $ch = curl_init('https://www.googleapis.com/qpxExpress/v1/trips/search?key=<Enter API KEY>');                                                                      
                 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
                 curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);                                                                      
