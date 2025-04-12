@@ -1,0 +1,13 @@
+#sidebar-page {
+  overflow: hidden;
+  .main-content {
+    padding: 0 20px;
+    border-left: 1px solid $md-grey-200;
+    @media(max-width: $screen-sm-max) {
+      border-right: none;
+    }
+  }
+}
+button {
+float: right;
+}
