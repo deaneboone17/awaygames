@@ -56,7 +56,7 @@ class TicketsController extends Controller
         //Make call to the SeatGeek API
 
         $client = new \GuzzleHttp\Client(['base_uri' =>'https://api.seatgeek.com/2/']);
-        $response = $client->get("https://api.seatgeek.com/2/events?performers[home_team].id=2076&performers.id=2074", ['auth'=>['NjU3MTE5MHwxNDgzNzI5NTMy', null]]);
+        $response = $client->get("https://api.seatgeek.com/2/events?performers[home_team].id=2076&performers.id=2074", ['auth'=>['<Enter API Key>', null]]);
 
         //echo $response->getBody();
         $data = json_decode($response->getBody(), true);
