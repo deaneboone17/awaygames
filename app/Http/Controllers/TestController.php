@@ -81,7 +81,7 @@ class TestController extends Controller
         //Send GET request to SeatGeek API
 
         $client = new \GuzzleHttp\Client(['base_uri' =>'https://api.seatgeek.com/2/']);
-        $response = $client->get("https://api.seatgeek.com/2/performers/$id", ['auth'=>['NjU3MTE5MHwxNDgzNzI5NTMy', null]]);
+        $response = $client->get("https://api.seatgeek.com/2/performers/$id", ['auth'=>['<Enter API KEY>', null]]);
 //?performers[home_team].id=$home&performers.id=$away
         //echo $response->getBody();
         $data = json_decode($response->getBody(), true);
