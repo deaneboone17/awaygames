@@ -54,7 +54,7 @@ public function getSchedules()
         $client = new \GuzzleHttp\Client(['base_uri' =>'https://profootballapi.com/']);
         $response = $client->post('schedule', 
             
-            ['query'=>['api_key'=>'r5VlK2SeRpoPZ3vcDq9Oj1BJyfuY8tUA'],['year'=>'2016']]);
+            ['query'=>['api_key'=>'<Enter API KEY>'],['year'=>'2016']]);
 
         //echo $response->getBody();
         $data = json_decode($response->getBody(), false);
