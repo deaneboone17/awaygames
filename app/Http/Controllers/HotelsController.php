@@ -40,7 +40,7 @@ class HotelsController extends Controller
 
         $tripId = $trip->id;
 
-      $api_token='t0EWzW0isTavSKzvujplXPGrDT6FBZAPhKVgKRABKV2nLEazJxZYDmVg-eo94fcTwzZuiQyikR1Sw5u3rqLYwEKpziEa-zkz5ynD-9830k2I_5L_xB0zBvnmdsfOWHYx';
+      $api_token='<API TOKEN>';
 
         //$trip = Trip::where('tripActive',1)->find($user_id);
 
